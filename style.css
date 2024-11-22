@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    position: relative;
+    z-index: 1000;
+}
+
+.left-space, .right-space {
+    width: 50px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.middle-space {
+    flex: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 10;
+    border: 1px solid #ddd;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.features-column {
+    float: left;
+    width: 50%;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.vertical {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.auth-buttons .signup-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.auth-buttons .signup-btn:hover {
+    background-color: #0056b3;
+}
+
+.auth-buttons .login-btn {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Hamburger menu visibility */
+.hamburger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+}
+/* Add this to your existing CSS to ensure the pointer cursor on hover for links and buttons */
+.dropdown-toggle, .dropdown-content a, .login-btn, .signup-btn {
+    cursor: pointer;
+}
+/* Ensure pointer cursor on hover for the logo */
+.logo img {
+    cursor: pointer;
+}
